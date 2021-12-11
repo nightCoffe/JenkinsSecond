@@ -20,7 +20,7 @@ public class TestBase implements CredentialsConfig {
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
         Configuration.startMaximized = true;
         Configuration.remote = format("https://%s:%s@%s", credentials.login(), credentials.password(),
-                System.getProperty("remoteUrl"));
+                System.getProperty("remoteBrowser"));
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("enableVNC", true);
